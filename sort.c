@@ -3,7 +3,7 @@
 
 int a[1000];
 
-void DirectInsertSort(int start,int end)
+void DirectInsertSort1(int start,int end)
 {
 	int i,j;
 	for (i = start + 1; i <= end; ++i) 
@@ -13,21 +13,21 @@ void DirectInsertSort(int start,int end)
             int temp = a[i];
             j = i - 1;
             do 
-			{    //�����ƶ���Ѱ�Ҳ���λ��
+			{    
                 a[j + 1] = a[j];
                 --j;
             }while (j >= start && a[j] > temp);
-            a[j + 1] = temp;  //����Ԫ��
+            a[j + 1] = temp;
         }
     }
 	
 	return;
  } 
  
-void sort()
+void DirectInsertSort2(int start,int end,int len)
 {
 	int temp,k,j,i;
-	for(i=1;i<20;i++)
+	for(i=start+1; i < len; i++)
 	{
 		temp = a[i];
 		j = i;
@@ -99,9 +99,9 @@ void bubbsort()
 	}
 	#endif
 
-	#if 0
+	#if 1
 	printf("\n----------------------------------\n");
-	DirectInsertSort(0,19);
+	DirectInsertSort2(0,19,20);
 	for(i=0;i<20;i++)
  	{
  		printf("%d\n",a[i]);
