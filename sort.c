@@ -24,7 +24,7 @@ void DirectInsertSort1(int start,int end)
 	return;
  } 
  
-void DirectInsertSort2(int start,int end,int len)
+void DirectInsertSort2(int start,int len)
 {
 	int temp,k,j,i;
 	for(i=start+1; i < len; i++)
@@ -98,10 +98,19 @@ void bubbsort()
  		printf("%d\n",a[i]);
 	}
 	#endif
+	
+	#if 0
+	printf("\n----------------------------------\n");
+	DirectInsertSort1(0,19);
+	for(i=0;i<20;i++)
+ 	{
+ 		printf("%d\n",a[i]);
+	}
+	#endif
 
 	#if 1
 	printf("\n----------------------------------\n");
-	DirectInsertSort2(0,19,20);
+	DirectInsertSort2(0,20);
 	for(i=0;i<20;i++)
  	{
  		printf("%d\n",a[i]);
